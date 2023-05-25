@@ -21,6 +21,13 @@ The AT command firmware allows for rapid integration by providing:
 - Easy-to-parse command-response protocols
 - Customized, user-defined AT commands
 
+# Build
+```
+git checkout release/v2.4.0.0
+python3 build.py build
+python3 build.py flash
+```
+
 # Resources
 - There are several guides for esp-at developers and users. These guides can be rendered in a number of formats, like HTML and PDF.  
   Documentation for the latest version: [https://docs.espressif.com/projects/esp-at/en/latest/index.html](https://docs.espressif.com/projects/esp-at/en/latest/index.html). This documentation is built from the [docs directory](https://github.com/espressif/esp-at/tree/master/docs) of this repository.
@@ -57,57 +64,3 @@ The AT command firmware allows for rapid integration by providing:
 - Other Series
   - ESP-AT will support ESP32-C2 and ESP32-C6 series of chips.
   - ESP-AT will not support ESP32-S and ESP32-H series of chips.
-
-# ESP-AT 项目
-esp-at 作为由 Espressif Systems (@[espressif](https://github.com/espressif/)) 发起和提供技术支持的官方项目，适用于 Windows、Linux、macOS 上的 **ESP32-C3**、**ESP32**、**ESP8266**、和 **ESP32-S2** 系列芯片。  
-当前该项目由 Espressif esp-at 团队 (@[esp-at](https://github.com/espressif/esp-at)) 负责技术支持和维护。  
-
-esp-at 是 MIT 许可证下的免费软件。
-
-# 简介
-乐鑫 Wi-Fi 和蓝牙芯片可以用作附加模块，完美集成在其他现有产品上，提供无线通讯功能。
-为降低客户开发成本，乐鑫开发了一套 AT 指令集，方便客户简单快速地使用 AT 指令来控制芯片。
-
-乐鑫提供的 AT 指令固件具有以下特色，利于芯片集成到应用中：
-
-- 内置 TCP/IP 堆栈和数据缓冲
-- 能便捷地集成到资源受限的主机平台中
-- 主机对指令的回应易于解析
-- 用户可自定义 AT 指令
-
-# 资源
-- 这里为开发者和用户提供了一些指南，这些指南可以以多种格式呈现，比如 HTML 和 PDF。  
-  最新文档见：[https://docs.espressif.com/projects/esp-at/zh_CN/latest/index.html](https://docs.espressif.com/projects/esp-at/zh_CN/latest/index.html)。该文档是由本仓库 [docs 目录](https://github.com/espressif/esp-at/tree/master/docs) 自动编译构建的。
-
-- 已发布版本的修改记录见：https://github.com/espressif/esp-at/releases
-
-- 如果你有 bug 上报或者功能需求，可以在 [GitHub Issues](https://github.com/espressif/esp-at/issues) 里提交。请在提交前检索下是否有相同的 Issue。
-
-- [esp-at 社区](https://www.esp32.com/viewforum.php?f=34) 可以用来询问问题或寻找一些社区资源。
-
-# ESP-AT 对不同芯片系列支持策略
-
-- ESP32-C3 系列
-  - **ESP-AT 首选推荐芯片**
-  - 推荐使用的发布版本：[v2.4.2.0](https://github.com/espressif/esp-at/releases/tag/v2.4.2.0)
-
-- ESP32 系列
-  - 推荐使用的发布版本：[v2.4.0.0](https://github.com/espressif/esp-at/releases/tag/v2.4.0.0)
-
-- ESP8266 系列
-  - **推荐使用 ESP32-C3 芯片**
-  - ESP-AT 不再为 ESP8266 添加新功能
-  - ESP-AT 不再为 ESP8266 发布大版本
-  - [v2.2.1.0_esp8266](https://github.com/espressif/esp-at/releases/tag/v2.2.1.0_esp8266) 是 ESP-AT 为 ESP8266 发布的最后一个版本，对应分支为 [release/v2.2.0.0_esp8266](https://github.com/espressif/esp-at/tree/release/v2.2.0.0_esp8266)，对应文档为 [https://docs.espressif.com/projects/esp-at/zh_CN/release-v2.2.0.0_esp8266](https://docs.espressif.com/projects/esp-at/zh_CN/release-v2.2.0.0_esp8266/)
-  - ESP-AT 将定期在 [release/v2.2.0.0_esp8266](https://github.com/espressif/esp-at/tree/release/v2.2.0.0_esp8266) 分支为 ESP8266 进行重要 bug 修复，安全修补等更新
-
-- ESP32-S2 系列
-  - **推荐使用 ESP32-C3 芯片**
-  - ESP-AT 不再为 ESP32-S2 添加新功能
-  - ESP-AT 不再为 ESP32-S2 发布大版本
-  - [v2.1.0.0_esp32s2](https://github.com/espressif/esp-at/releases/tag/v2.1.0.0_esp32s2) 是 ESP-AT 为 ESP32-S2 发布的最后一个版本，对应分支为 [release/v2.1.0.0_esp32s2](https://github.com/espressif/esp-at/tree/release/v2.1.0.0_esp32s2)，对应文档为 [https://docs.espressif.com/projects/esp-at/zh_CN/release-v2.1.0.0_esp32s2](https://docs.espressif.com/projects/esp-at/zh_CN/release-v2.1.0.0_esp32s2/)
-  - ESP-AT 将定期在 [release/v2.2.0.0_esp32](https://github.com/espressif/esp-at/tree/release/v2.2.0.0_esp32) 分支为 ESP32-S2 进行重要 bug 修复，安全修补等更新
-
-- 其它系列
-  - ESP-AT 将计划支持 ESP32-C2、ESP32-C6 系列芯片
-  - ESP-AT 无计划支持 ESP32-S、ESP32-H 系列芯片
